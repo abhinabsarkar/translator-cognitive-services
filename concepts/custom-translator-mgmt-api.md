@@ -104,3 +104,11 @@ Go to the "Regions" API --> for the authorization parameter, enter the value "Be
 ![alt txt](/images/swagger-regions.png)
 
 Click Try it out!. It should return the list of regions.
+
+What this means is a workflow like this can be used for automation scenarios:
+1) Log-in once interactively to get the id token and a refresh token.
+2) Store both the id token and the refresh token in a cache.
+3) Automation can use the id token to login without the need for user intervention.
+4) When the id token expires, a new token can be retrieved and stored by using the refresh token
+
+Refer this link for a sample desktop app to get the id_token - https://github.com/MicrosoftTranslator/CustomTranslator-API-CSharp
